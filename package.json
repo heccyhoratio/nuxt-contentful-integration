@@ -1,0 +1,30 @@
+{
+    "name": "",
+    "version": "1.0.0",
+    "description": "",
+    "dependencies": {
+        "@nuxtjs/dotenv": "^1.1.1",
+        "contentful": "^6.1.1",
+        "nuxt": "^1.4.1"
+    },
+    "devDependencies": {
+        "babel-eslint": "^8.2.3",
+        "eslint": "^4.19.1",
+        "eslint-config-standard": "^11.0.0-beta.0",
+        "eslint-loader": "^1.9.0",
+        "eslint-plugin-html": "^4.0.2",
+        "eslint-plugin-import": "^2.8.0",
+        "eslint-plugin-jest": "^21.9.0",
+        "eslint-plugin-node": "^6.0.0",
+        "eslint-plugin-promise": "^3.6.0",
+        "eslint-plugin-standard": "^3.0.1"
+    },
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate"
+    },
+    "author": "Breakthrough Media",
+    "license": "ISC"
+}

@@ -1,2 +1,3 @@
-# nuxt-contentful-integration
-Nuxt.js &amp; contentful integration to be used with Netlify
+# Nuxt Contentful Integration
+
+Simple Nuxt.js &amp; contentful integration built to use as a test with Netlify.
