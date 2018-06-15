@@ -1,7 +1,8 @@
-require('dotenv').config();
+const contentful = require('./.contentful.json');
 const client = require('./src/js/plugins/contentful');
 
 module.exports = {
+    env: contentful,
     srcDir: 'src/js',
     /*
     ** Headers of the page
@@ -37,7 +38,6 @@ module.exports = {
         }
     },
     plugins: ['~/plugins/contentful'],
-    modules: ['@nuxtjs/dotenv'],
     generate: {
         dir: 'public',
         routes() {

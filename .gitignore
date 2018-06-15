@@ -14,3 +14,4 @@ __MACOSX/
 .nuxt
 .env
 public/*
+.contentful.json
