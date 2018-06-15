@@ -1,5 +1,5 @@
 <template lang="html">
-    <div class="app">
+    <div class="app" v-if="post">
         <h1>{{ post.fields.title }}</h1>
         <div>
             {{ post.fields.content }}
@@ -17,15 +17,15 @@ export default {
         return client.getEntries({
             content_type: 'blogPost',
             'fields.slug': params.slug
-        })
-            .then((response) => {
-                return {post: response.items[0]};
-            })
-            .catch(console.error);
+        }).then((response) => {
+            return {
+                post: response.items[0]
+            };
+        }).catch(console.error);
     },
     head() {
         return {
-            title: this.post.fields.title
+            title: 'Test'
         };
     }
 };
