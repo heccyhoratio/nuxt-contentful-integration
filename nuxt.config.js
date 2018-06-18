@@ -1,5 +1,4 @@
-const contentful = require('./.contentful.json');
-const client = require('./src/js/plugins/contentful');
+const contentful = require('./.contentfulconfig.json');
 
 module.exports = {
     env: contentful,
@@ -39,19 +38,6 @@ module.exports = {
     },
     plugins: ['~/plugins/contentful'],
     generate: {
-        dir: 'public',
-        routes() {
-            return client.getEntries({
-                content_type: 'blogPost'
-            })
-                .then((response) => {
-                    return response.items.map(entry => {
-                        return {
-                            route: entry.fields.slug,
-                            payload: entry
-                        };
-                    });
-                });
-        }
+        dir: 'public'
     }
 };
