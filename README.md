@@ -10,7 +10,7 @@ Install the project dependencies:
 yarn run install
 ```
 
-Create a config file called `.contentful.json` with the following variables:
+Create a config file called `.contentfulconfig.json` with the following variables:
 
 ```sh
 {
