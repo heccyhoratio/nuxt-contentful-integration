@@ -10,17 +10,14 @@
 </template>
 
 <script>
-import client from '../plugins/contentful';
-
 export default {
-    asyncData() {
-        return client.getEntries({
-            content_type: 'blogPost'
-        }).then((response) => {
-            return {
-                posts: response.items
-            };
-        }).catch(console.error);
+    computed: {
+        posts() {
+            return this.$store.state.blogposts.posts;
+        }
+    },
+    async fetch({ store, params }) {
+        await store.dispatch('blogposts/getPosts', params.slug);
     },
     head: {
         title: 'Latest Posts'

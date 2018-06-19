@@ -1,31 +1,25 @@
 <template lang="html">
-    <div class="app" v-if="post">
-        <h1>{{ post.fields.title }}</h1>
+    <div v-if="currentPost.content">
+        <h1>{{ currentPost.title }}</h1>
         <div>
-            {{ post.fields.content }}
+            {{ currentPost.content }}
         </div>
     </div>
 </template>
 
 <script>
-import client from '../plugins/contentful';
-
 export default {
-    asyncData({ params, error, payload }) {
-        if (payload) return { post: payload };
-
-        return client.getEntries({
-            content_type: 'blogPost',
-            'fields.slug': params.slug
-        }).then((response) => {
-            return {
-                post: response.items[0]
-            };
-        }).catch(console.error);
+    computed: {
+        currentPost() {
+            return this.$store.state.blogposts.currentPost;
+        }
+    },
+    async fetch({ store, params }) {
+        await store.dispatch('blogposts/getSinglePost', params.slug);
     },
     head() {
         return {
-            title: 'Test'
+            title: this.currentPost.title
         };
     }
 };
