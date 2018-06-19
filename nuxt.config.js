@@ -1,7 +1,8 @@
-const contentful = require('./.contentfulconfig.json');
+const contentfulConfig = require('./.contentfulconfig.json');
+const contentful = require('contentful');
 
 module.exports = {
-    env: contentful,
+    env: contentfulConfig,
     srcDir: 'src/js',
     /*
     ** Headers of the page
@@ -38,6 +39,24 @@ module.exports = {
     },
     plugins: ['~/plugins/contentful'],
     generate: {
-        dir: 'public'
+        dir: 'public',
+        routes: function () {
+            const client = contentful.createClient({
+                // This is the space ID. A space is like a project folder in Contentful terms
+                space: contentfulConfig.CTF_SPACE_ID,
+                // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
+                accessToken: contentfulConfig.CTF_CDA_ACCESS_TOKEN
+            });
+            return client.getEntries({
+                content_type: 'blogPost'
+            }).then((response) => {
+                return response.items.map(entry => {
+                    return {
+                        route: entry.fields.slug,
+                        payload: entry
+                    };
+                });
+            });
+        }
     }
 };
