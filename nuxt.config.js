@@ -35,6 +35,10 @@ module.exports = {
                     exclude: /(node_modules)/
                 });
             }
+            config.module.rules.push({
+                test: /\.scss/,
+                loader: 'import-glob-loader'
+            });
         }
     },
     plugins: ['~/plugins/contentful'],
@@ -58,5 +62,8 @@ module.exports = {
                 });
             });
         }
-    }
+    },
+    css: [
+        './src/scss/app.scss'
+    ]
 };
