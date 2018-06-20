@@ -3723,6 +3723,13 @@ loose-envify@^1.0.0:
   dependencies:
     js-tokens "^3.0.0"
 
+lost@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/lost/-/lost-8.3.0.tgz#adaa8f82b04c99222503a08dfc11d01fe664645d"
+  dependencies:
+    object-assign "^4.1.0"
+    postcss "^6.0.6"
+
 loud-rejection@^1.0.0, loud-rejection@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/loud-rejection/-/loud-rejection-1.6.0.tgz#5b46f80147edee578870f086d04821cf998e551f"
@@ -4766,6 +4773,12 @@ postcss-discard-unused@^2.2.1:
   dependencies:
     postcss "^5.0.14"
     uniqs "^2.0.0"
+
+postcss-encode-background-svgs@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-encode-background-svgs/-/postcss-encode-background-svgs-1.0.3.tgz#385a769f0613c81ff98fa4add91accd642f87522"
+  dependencies:
+    postcss "^6.0.1"
 
 postcss-filter-plugins@^2.0.0:
   version "2.0.3"

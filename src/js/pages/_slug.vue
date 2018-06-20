@@ -1,6 +1,6 @@
 <template lang="html">
-    <div v-if="currentPost.content">
-        <h1>{{ currentPost.title }}</h1>
+    <div v-if="currentPost.content" class="c-single-post">
+        <h1 class="c-single-post__title">{{ currentPost.title }}</h1>
         <div>
             {{ currentPost.content }}
         </div>

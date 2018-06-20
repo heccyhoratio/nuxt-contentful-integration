@@ -23,11 +23,11 @@ module.exports = {
     ** Build configuration
     */
     build: {
-        /*
-        ** Run ESLint on save
-        */
         extend (config, { isDev, isClient }) {
             if (isDev && isClient) {
+                /*
+                ** Run ESLint on save
+                */
                 config.module.rules.push({
                     enforce: 'pre',
                     test: /\.(js|vue)$/,
@@ -39,7 +39,11 @@ module.exports = {
                 test: /\.scss/,
                 loader: 'import-glob-loader'
             });
-        }
+        },
+        postcss: [
+            require('lost')(),
+            require('postcss-encode-background-svgs')()
+        ]
     },
     plugins: ['~/plugins/contentful'],
     generate: {

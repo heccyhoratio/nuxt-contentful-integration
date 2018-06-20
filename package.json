@@ -5,8 +5,10 @@
     "dependencies": {
         "contentful": "^6.1.1",
         "import-glob-loader": "^1.1.0",
+        "lost": "^8.3.0",
         "node-sass": "^4.9.0",
         "nuxt": "^1.4.1",
+        "postcss-encode-background-svgs": "^1.0.3",
         "sass-loader": "^7.0.3"
     },
     "devDependencies": {
