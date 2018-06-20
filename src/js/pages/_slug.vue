@@ -1,9 +1,7 @@
 <template lang="html">
     <div v-if="currentPost.content" class="c-single-post">
         <h1 class="c-single-post__title">{{ currentPost.title }}</h1>
-        <div>
-            {{ currentPost.content }}
-        </div>
+        <div class="s-content" v-html="$md.render(currentPost.content)"></div>
     </div>
 </template>
 

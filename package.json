@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "dependencies": {
+        "@nuxtjs/markdownit": "^1.2.1",
         "contentful": "^6.1.1",
         "import-glob-loader": "^1.1.0",
         "lost": "^8.3.0",

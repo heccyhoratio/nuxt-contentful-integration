@@ -46,6 +46,10 @@ module.exports = {
         ]
     },
     plugins: ['~/plugins/contentful'],
+    modules: ['@nuxtjs/markdownit'],
+    markdownit: {
+        injected: true
+    },
     generate: {
         dir: 'public',
         routes: function () {
