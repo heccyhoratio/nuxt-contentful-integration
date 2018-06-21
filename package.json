@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "dependencies": {
+        "aws-sdk": "^2.260.1",
         "contentful": "^6.1.1",
         "dotenv": "^6.0.0",
         "nuxt": "^1.4.1"
