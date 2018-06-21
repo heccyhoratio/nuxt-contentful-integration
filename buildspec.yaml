@@ -23,7 +23,7 @@ phases:
   post_build:
     commands:
        ls -lsa
-      # - command
+       node uploadS3.JS
 artifacts:
   files:
     ./**/*
