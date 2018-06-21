@@ -1,0 +1,35 @@
+version: 0.2
+
+env:
+  variables:
+      CTF_SPACE_ID: "7n7u37wigd8z"
+      CTF_CDA_ACCESS_TOKEN: "07618fdcaef5665154e0bbc4abb3c9ecb38e57e9314a8a0c90a66391707b0a2c"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+
+phases:
+  install:
+    commands:
+      npm install
+      # - command
+  pre_build:
+    commands:
+      # - command
+  build:
+    commands:
+      npm run generate
+      # - command
+  post_build:
+    commands:
+       ls -lsa
+      # - command
+artifacts:
+  files:
+    ./**/*
+    # - location
+#  discard-paths: yes
+  base-directory: public
+#cache:
+  #paths:
+    # - paths
