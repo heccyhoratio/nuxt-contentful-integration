@@ -22,7 +22,6 @@ phases:
       # - command
   post_build:
     commands:
-       ls -lsa
        node uploadS3.JS
 artifacts:
   files:
